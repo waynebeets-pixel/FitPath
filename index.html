@@ -7,10 +7,10 @@
 <title>FitPath</title>
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-180.png">
-<meta name="theme-color" content="#0e9f8e">
+<meta name="theme-color" content="#f3f0f2">
 <style>
-:root{--bg:#f2f7f6;--card:#fff;--ink:#12302c;--mut:#5d7a75;--pri:#0e9f8e;--pri2:#0a7c6f;--acc:#ffc83d;--line:#dbe8e5;--r:20px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a18;--card:#1626;--ink:#e8f3f1;--mut:#92b0aa;--line:#264540;--card:#162826;color-scheme:dark}}
+:root{--bg:#f3f0f2;--card:#fff;--ink:#3b3438;--mut:#766d73;--pri:#e87a9f;--pri2:#b93b66;--acc:#f6b8cb;--onpri:#3b2a31;--line:#e3dfe3;--r:20px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1b1e;--card:#2a2529;--ink:#f3eaee;--mut:#b8aab1;--pri:#f2a0b9;--pri2:#f6b3c7;--acc:#f2a0b9;--onpri:#2b1e24;--line:#40373c;color-scheme:dark}}
 html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
 body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:16px/1.45 Figtree,system-ui,sans-serif;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
@@ -22,27 +22,27 @@ h1{font-size:30px;font-weight:800}h2{font-size:20px;font-weight:800;margin:22px 
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:12px 0}
 .row{display:flex;align-items:center;gap:10px}.sp{justify-content:space-between}.wrap{flex-wrap:wrap}
 button,input,select{font:inherit;color:inherit}
-button{border:0;border-radius:14px;padding:10px 16px;background:var(--pri);color:#fff;font-weight:600;cursor:pointer}
-button.ghost{background:transparent;color:var(--pri);border:1.5px solid var(--pri)}
+button{border:0;border-radius:14px;padding:10px 16px;background:var(--pri);color:var(--onpri);font-weight:600;cursor:pointer}
+button.ghost{background:transparent;color:var(--pri2);border:1.5px solid var(--pri2)}
 button.sm{padding:6px 12px;font-size:14px;border-radius:10px}
 button.chip{background:var(--card);color:var(--ink);border:1px solid var(--line);padding:7px 14px;border-radius:99px;font-size:14px}
 button.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--pri2);outline-offset:2px}
 input,select{width:100%;padding:10px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg)}
 label{display:block;font-size:14px;color:var(--mut);margin:10px 0 4px}
 .bar{height:10px;border-radius:9px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;background:var(--pri);border-radius:9px}
 .big{font:800 34px "Bricolage Grotesque",sans-serif}
 nav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:8px 6px calc(8px + env(safe-area-inset-bottom,0px));z-index:20}
 nav button{background:none;color:var(--mut);padding:6px 10px;font-size:13px;flex:1}
-nav button.on{color:var(--pri);font-weight:800}
+nav button.on{color:var(--pri2);font-weight:800}
 .wk{display:flex;gap:12px;align-items:center;width:100%;text-align:left;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:var(--r);padding:14px;margin:8px 0}
-.badge{min-width:52px;height:52px;border-radius:16px;background:var(--acc);color:#12302c;display:grid;place-items:center;font:800 13px "Bricolage Grotesque",sans-serif;text-align:center}
+.badge{min-width:52px;height:52px;border-radius:16px;background:var(--acc);color:var(--onpri);display:grid;place-items:center;font:800 13px "Bricolage Grotesque",sans-serif;text-align:center}
 .li{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);align-items:center}
 .li:last-child{border:0}
-#pl{position:fixed;inset:0;background:var(--ink);color:var(--bg);z-index:50;display:none;padding:calc(24px + env(safe-area-inset-top,0px)) 24px calc(24px + env(safe-area-inset-bottom,0px));flex-direction:column;justify-content:space-between;text-align:center}
+#pl{position:fixed;inset:0;background:#332c31;color:#f7eff2;z-index:50;display:none;padding:calc(24px + env(safe-area-inset-top,0px)) 24px calc(24px + env(safe-area-inset-bottom,0px));flex-direction:column;justify-content:space-between;text-align:center}
 #pl .t{font:800 110px/1 "Bricolage Grotesque",sans-serif}
-#pl button{background:var(--acc);color:#12302c}
-#pl button.ghost{background:transparent;color:var(--bg);border-color:var(--bg)}
+#pl button{background:var(--acc);color:var(--onpri)}
+#pl button.ghost{background:transparent;color:#f7eff2;border-color:#f7eff2}
 .fg{color:var(--pri);display:block;flex:none}#pl .fg{color:var(--acc);margin:0 auto 8px}
 @media (prefers-reduced-motion:no-preference){.bar i{transition:width .4s}}
 </style>
@@ -80,10 +80,15 @@ const raw=[
 ["Sun Salutation Flow","Yoga","Cat-cow:45,Downward dog:45,Low lunge left:40,Low lunge right:40,Cobra pose:40,Child’s pose:60","Beginner"],
 ["Power Yoga","Yoga","Downward dog:45,Warrior I left:45,Warrior I right:45,Chair pose:40,Plank:45,Cobra pose:40,Child’s pose:60","Advanced"],
 ["Yoga for Sleep","Yoga","Cat-cow:45,Child’s pose:60,Seated forward fold:45,Spinal twist:45,Legs up the wall:60","Beginner"],
-["Pilates Sculpt","Pilates","The hundred:45,Roll-up:40,Single leg stretch:45,Scissor kicks:40,Swimming:45,Glute bridge:45,Side-lying leg lifts:45","Intermediate"],
+["Pilates Sculpt","Pilates","The hundred:45,Roll-up:40,Single leg stretch:45,Scissor legs:40,Swimming:45,Glute bridge:45,Side-lying leg lifts:45","Intermediate"],
 ["Pilates Beginner Core","Pilates","Pelvic tilts:40,Glute bridge:40,Dead bugs:40,Swimming:30,Bird dog:40","Beginner"],
 ["Desk Break Stretch","Stretch","Neck rolls:30,Shoulder stretch:30,Seated twist:30,Hamstring stretch:30,Wrist stretch:20","Beginner"],
-["Full Body Mobility","Stretch","Hip opener:40,Lunge stretch left:40,Lunge stretch right:40,Hamstring stretch:40,Spinal twist:40,Cobra pose:30","Intermediate"]];
+["Full Body Mobility","Stretch","Hip opener:40,Lunge stretch left:40,Lunge stretch right:40,Hamstring stretch:40,Spinal twist:40,Cobra pose:30","Intermediate"],
+["Pilates Mat Basics","Pilates","Pelvic tilts:40,The hundred:40,Single leg stretch:40,Glute bridge:40,Spine twist:40,Cat-cow:40","Beginner"],
+["Pilates Lower Body","Pilates","Side-lying leg lifts:45,Glute bridge:45,Squat pulses:40,Lunge pulses:40,Calf raises:40,Scissor legs:40","Intermediate"],
+["Pilates Core Burner","Pilates","Single leg stretch:45,Criss-cross crunches:45,Dead bugs:45,Plank shoulder taps:40,Saw twist:40,Bird dog:40,Swimming:40","Intermediate"],
+["Pilates Flow","Pilates","The hundred:45,Roll-up:45,Criss-cross crunches:45,Scissor legs:45,Swimming:45,Pilates push-ups:40,Plank:45,Child’s pose:45","Advanced"],
+["Pilates Stretch and Reset","Pilates","Cat-cow:40,Mermaid stretch:40,Spine twist:40,Child’s pose:60,Hamstring stretch:40,Hip opener:40","Beginner"]];
 const W=raw.map((r,i)=>{const ex=r[2].split(",").map(x=>{const p=x.split(":");return[p[0],+p[1]]});const sec=sum(ex,e=>e[1])+10*(ex.length-1),min=Math.round(sec/60);return{id:i,name:r[0],cat:r[1],ex,min,kcal:Math.round(min*rate[r[1]]),lv:r[3]||["Beginner","Intermediate","Intermediate","Beginner","Intermediate","Beginner","Intermediate","Beginner"][i]}});
 const cats=["All","Cardio","Strength","Yoga","Pilates","Stretch"];
 const B=[["Oats with banana and peanut butter",380],["Greek yoghurt, berries and granola",320],["Veggie scramble on wholegrain toast",350],["Overnight oats with chia and apple",340]],
@@ -98,14 +103,14 @@ const burned=d=>sum(d.wo,w=>w.k),eaten=d=>sum(d.meals,m=>m.k);
 const pct=(a,b)=>Math.min(100,Math.round(a/Math.max(1,b)*100));
 function today(){const d=day(),bud=S.g.cal+burned(d),left=bud-eaten(d),C=2*Math.PI*52,off=C*(1-Math.min(1,eaten(d)/Math.max(1,bud)));
 const lw=S.w.length?S.w[S.w.length-1].w:null;
-return `<h1>Today</h1><div class="mut">${new Date().toLocaleDateString(undefined,{weekday:"long",day:"numeric",month:"long"})}</div>
+return `<h1>${S.p&&S.p.n?"Hi, "+esc(S.p.n):"Today"}</h1><div class="mut">${new Date().toLocaleDateString(undefined,{weekday:"long",day:"numeric",month:"long"})}</div>
 <div class="card row sp"><svg width="130" height="130" viewBox="0 0 130 130" role="img" aria-label="${eaten(d)} of ${bud} calories"><circle cx="65" cy="65" r="52" fill="none" stroke="var(--line)" stroke-width="14"/><circle cx="65" cy="65" r="52" fill="none" stroke="${left<0?"#e5484d":"var(--pri)"}" stroke-width="14" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${off}" transform="rotate(-90 65 65)"/><text x="65" y="63" text-anchor="middle" font-size="26" font-weight="800" fill="currentColor">${Math.abs(left)}</text><text x="65" y="82" text-anchor="middle" font-size="11" fill="var(--mut)">${left<0?"kcal over":"kcal left"}</text></svg>
 <div style="flex:1"><div class="li"><span class="mut">Eaten</span><b>${eaten(d)}</b></div><div class="li"><span class="mut">Goal</span><b>${S.g.cal}</b></div><div class="li"><span class="mut">Burned</span><b>${burned(d)}</b></div></div></div>
 <div class="card"><div class="row sp"><h3>Water</h3><span class="mut">${d.water} / ${S.g.water} ml</span></div><div class="bar" style="margin:10px 0"><i style="width:${pct(d.water,S.g.water)}%"></i></div><div class="row"><button class="sm" onclick="water(250)">+250 ml</button><button class="sm ghost" onclick="water(500)">+500 ml</button><button class="sm ghost" onclick="water(-250)">Undo</button></div></div>
 <div class="card"><div class="row sp"><h3>Steps</h3><span class="mut">${d.steps.toLocaleString()} / ${S.g.steps.toLocaleString()}</span></div><div class="bar" style="margin:10px 0"><i style="width:${pct(d.steps,S.g.steps)}%"></i></div><div class="row"><input id="st" type="number" inputmode="numeric" placeholder="Steps to add" aria-label="Steps to add"><button onclick="addSteps()">Add</button></div></div>
 <div class="card"><div class="row sp"><h3>Weight</h3><span class="mut">${lw?lw+" kg":"Not logged yet"}${S.g.wt?" · goal "+S.g.wt+" kg":""}</span></div><div class="row" style="margin-top:10px"><input id="wt" type="number" step="0.1" inputmode="decimal" placeholder="Today’s weight (kg)" aria-label="Weight in kg"><button onclick="logW()">Log</button></div></div>
 <h2>Workouts today</h2>${d.wo.length?`<div class="card">${d.wo.map(w=>`<div class="li"><span>${esc(w.n)}</span><b>${w.k} kcal</b></div>`).join("")}</div>`:`<div class="card mut">No workout yet. Pick one in the Workouts tab.</div>`}`}
-function workouts(){if(wsel!==null){const w=W[wsel];return `<button class="ghost sm" onclick="wsel=null;render()">Back</button><h1 style="margin-top:12px">${esc(w.name)}</h1><div class="mut">${w.cat} · ${w.lv} · about ${w.min} min · ~${w.kcal} kcal</div><div class="card">${w.ex.map(e=>`<div class="li"><span class="row">${fig(e[0],72)}<span>${esc(e[0])}<br><a href="https://www.youtube.com/results?search_query=${encodeURIComponent(e[0]+" exercise form")}" target="_blank" rel="noopener" style="color:var(--pri);font-size:14px">Watch a video</a></span></span><span class="mut">${e[1]} s</span></div>`).join("")}</div><div class="mut">Each move has a 10 second rest after it. Stop if anything hurts.</div><button style="width:100%;margin-top:14px;padding:14px" onclick="startW(${w.id})">Start workout</button>`}
+function workouts(){if(wsel!==null){const w=W[wsel];return `<button class="ghost sm" onclick="wsel=null;render()">Back</button><h1 style="margin-top:12px">${esc(w.name)}</h1><div class="mut">${w.cat} · ${w.lv} · about ${w.min} min · ~${w.kcal} kcal</div><div class="card">${w.ex.map(e=>`<div class="li"><span class="row">${fig(e[0],72)}<span>${esc(e[0])}<br><a href="https://www.youtube.com/results?search_query=${encodeURIComponent(e[0]+" exercise form")}" target="_blank" rel="noopener" style="color:var(--pri2);font-size:14px">Watch a video</a></span></span><span class="mut">${e[1]} s</span></div>`).join("")}</div><div class="mut">Each move has a 10 second rest after it. Stop if anything hurts.</div><button style="width:100%;margin-top:14px;padding:14px" onclick="startW(${w.id})">Start workout</button>`}
 return `<h1>Workouts</h1><div class="row wrap" style="margin:12px 0">${cats.map(c=>`<button class="chip ${c==cat?"on":""}" onclick="cat='${c}';render()">${c}</button>`).join("")}</div><div class="row wrap" style="margin:0 0 12px">${["All","Beginner","Intermediate","Advanced"].map(c=>`<button class="chip ${c==lv?"on":""}" onclick="lv='${c}';render()">${c}</button>`).join("")}</div>`+W.filter(w=>(cat=="All"||w.cat==cat)&&(lv=="All"||w.lv==lv)).map(w=>`<button class="wk" onclick="wsel=${w.id};render()"><span class="badge">${w.min}<br>min</span><span style="flex:1"><b>${esc(w.name)}</b><br><span class="mut">${w.cat} · ${w.lv} · ${w.ex.length} moves · ~${w.kcal} kcal</span></span></button>`).join("")}
 function meals(){const d=day();return `<h1>Meals</h1><div class="mut">A simple 7-day plan. Tap Log to add a meal to today.</div><div class="row wrap" style="margin:12px 0">${dn.map((n,i)=>`<button class="chip ${i==msel?"on":""}" onclick="msel=${i};render()">${n}</button>`).join("")}</div><div class="card">${plan(msel).map(p=>`<div class="li"><span><span class="mut">${p[0]}</span><br>${esc(p[1][0])}<br><span class="mut">${p[1][1]} kcal</span></span><button class="sm" onclick="addFood(${JSON.stringify(p[1][0]).replace(/"/g,"&quot;")},${p[1][1]})">Log</button></div>`).join("")}<div class="mut" style="margin-top:8px">Day total: ${sum(plan(msel),p=>p[1][1])} kcal</div></div>
 <h2>Add your own</h2><div class="card"><div class="row"><input id="fn" placeholder="Food or drink" aria-label="Food name"><input id="fk" type="number" inputmode="numeric" placeholder="kcal" style="width:90px" aria-label="Calories"></div><button style="margin-top:10px" onclick="addCustom()">Add to today</button></div>
@@ -116,11 +121,11 @@ ch=`<svg viewBox="0 0 320 140" width="100%" role="img" aria-label="Weight chart"
 const days=[...Array(7)].map((_,i)=>{const t=new Date();t.setDate(t.getDate()-6+i);const d=S.log[dk(t)]||{water:0,steps:0,meals:[],wo:[]};return{n:dn[t.getDay()],e:eaten(d),s:d.steps,w:d.wo.length}});
 const mx=Math.max(S.g.cal,...days.map(x=>x.e));const first=S.w[0],last=S.w[S.w.length-1];
 return `<h1>Progress</h1><div class="card"><h3>Weight</h3>${ch}${first&&last?`<div class="mut">Change since first entry: <b>${(last.w-first.w>0?"+":"")+(last.w-first.w).toFixed(1)} kg</b></div>`:""}</div>
-<div class="card"><h3>Calories, last 7 days</h3><svg viewBox="0 0 320 130" width="100%" role="img" aria-label="Calories per day">${days.map((x,i)=>{const h=x.e/mx*90;return `<rect x="${i*45+8}" y="${100-h}" width="30" height="${h}" rx="6" fill="${x.e>S.g.cal?"#e5484d":"var(--pri)"}"/><text x="${i*45+23}" y="118" font-size="11" text-anchor="middle" fill="var(--mut)">${x.n}</text>`}).join("")}<line x1="0" x2="320" y1="${100-S.g.cal/mx*90}" y2="${100-S.g.cal/mx*90}" stroke="var(--acc)" stroke-dasharray="4 4" stroke-width="2"/></svg></div>
+<div class="card"><h3>Calories, last 7 days</h3><svg viewBox="0 0 320 130" width="100%" role="img" aria-label="Calories per day">${days.map((x,i)=>{const h=x.e/mx*90;return `<rect x="${i*45+8}" y="${100-h}" width="30" height="${h}" rx="6" fill="${x.e>S.g.cal?"#e5484d":"var(--pri)"}"/><text x="${i*45+23}" y="118" font-size="11" text-anchor="middle" fill="var(--mut)">${x.n}</text>`}).join("")}<line x1="0" x2="320" y1="${100-S.g.cal/mx*90}" y2="${100-S.g.cal/mx*90}" stroke="var(--pri2)" stroke-dasharray="4 4" stroke-width="2"/></svg></div>
 <div class="card"><h3>This week</h3><div class="li"><span class="mut">Workouts done</span><b>${sum(days,x=>x.w)}</b></div><div class="li"><span class="mut">Total steps</span><b>${sum(days,x=>x.s).toLocaleString()}</b></div><div class="li"><span class="mut">Days within calorie goal</span><b>${days.filter(x=>x.e>0&&x.e<=S.g.cal).length}</b></div></div>
 ${S.w.length?`<h2>Weight history</h2><div class="card">${S.w.slice().reverse().slice(0,10).map(x=>`<div class="li"><span>${x.d}</span><b>${x.w} kg</b></div>`).join("")}</div>`:""}`}
 function me(){return `<h1>Me</h1><div class="card"><h3>Daily goals</h3><label for="gc">Calories (kcal)</label><input id="gc" type="number" value="${S.g.cal}"><label for="gw">Water (ml)</label><input id="gw" type="number" value="${S.g.water}"><label for="gs">Steps</label><input id="gs" type="number" value="${S.g.steps}"><label for="gt">Goal weight (kg)</label><input id="gt" type="number" step="0.1" value="${S.g.wt}"><button style="margin-top:12px" onclick="saveGoals()">Save goals</button></div>
-<div class="card"><h3>Calorie calculator</h3><div class="mut">Estimates a daily target from your details.</div><div class="row"><div style="flex:1"><label for="ca">Age</label><input id="ca" type="number"></div><div style="flex:1"><label for="cs">Sex</label><select id="cs"><option value="m">Male</option><option value="f">Female</option></select></div></div><div class="row"><div style="flex:1"><label for="ch">Height (cm)</label><input id="ch" type="number"></div><div style="flex:1"><label for="cw">Weight (kg)</label><input id="cw" type="number"></div></div><label for="cv">Activity</label><select id="cv"><option value="1.2">Mostly sitting</option><option value="1.375" selected>Light activity</option><option value="1.55">Moderate activity</option><option value="1.725">Very active</option></select><label for="cg">Aim</label><select id="cg"><option value="-500">Lose weight</option><option value="0">Maintain</option><option value="300">Build muscle</option></select><button style="margin-top:12px" onclick="calc()">Calculate and set goal</button><div id="cr" class="mut" style="margin-top:8px">${esc(note)}</div></div>
+<div class="card"><h3>Profile and calorie calculator</h3><div class="mut">Saved on this device and used to estimate your daily calorie target.</div><label for="cn">Name</label><input id="cn" type="text" autocomplete="off"><div class="row"><div style="flex:1"><label for="ca">Age</label><input id="ca" type="number"></div><div style="flex:1"><label for="cs">Sex</label><select id="cs"><option value="m">Male</option><option value="f">Female</option></select></div></div><div class="row"><div style="flex:1"><label for="ch">Height (cm)</label><input id="ch" type="number"></div><div style="flex:1"><label for="cw">Weight (kg)</label><input id="cw" type="number"></div></div><label for="cv">Activity</label><select id="cv"><option value="1.2">Mostly sitting</option><option value="1.375" selected>Light activity</option><option value="1.55">Moderate activity</option><option value="1.725">Very active</option></select><label for="cg">Aim</label><select id="cg"><option value="-500">Lose weight</option><option value="0">Maintain</option><option value="300">Build muscle</option></select><div class="row" style="margin-top:12px"><button class="ghost" onclick="saveProfile()">Save profile</button><button onclick="calc()">Save and set calorie goal</button></div><div id="cr" class="mut" style="margin-top:8px">${esc(note)}</div></div>
 <div class="mut">Your data stays on this device in this browser. This app gives general fitness guidance, not medical advice. Check with a doctor before starting a new exercise or diet plan.</div><button class="ghost sm" style="margin-top:12px" onclick="if(confirm('Delete all your data?')){S={g:{cal:2000,water:2000,steps:8000,wt:''},log:{},w:[]};save();render()}">Delete all data</button>`}
 function render(){const v={today,workouts,meals,progress,me}[tab]();$("#app").innerHTML=v;$("#nav").innerHTML=[["today","Today"],["workouts","Workouts"],["meals","Meals"],["progress","Progress"],["me","Me"]].map(t=>`<button class="${t[0]==tab?"on":""}" onclick="go('${t[0]}')" ${t[0]==tab?'aria-current="page"':""}>${t[1]}</button>`).join("")}
 function go(t){tab=t;wsel=null;render();scrollTo(0,0)}
@@ -145,6 +150,8 @@ const fig=(n,s)=>{const r=R.find(x=>x[0].test(n.toLowerCase()));return `<svg cla
 const RM=matchMedia("(prefers-reduced-motion:reduce)").matches,LN=[[1,2],[1,3],[3,4],[1,5],[5,6],[2,7],[7,8],[2,9],[9,10],[0,1]];
 function paint(){const k=RM?0:.5-.5*Math.cos(Date.now()/420);document.querySelectorAll(".fg").forEach(s=>{const m=M[s.dataset.m],p=m[0].map((a,i)=>a+(m[1][i]-a)*k);let h='<line x1="4" x2="96" y1="91" y2="91" stroke="var(--line)" stroke-width="2"/><g stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none">';LN.forEach(l=>h+=`<line x1="${p[l[0]*2]}" y1="${p[l[0]*2+1]}" x2="${p[l[1]*2]}" y2="${p[l[1]*2+1]}"/>`);s.innerHTML=h+`<circle cx="${p[0]}" cy="${p[1]}" r="7"/></g>`})}
 setInterval(paint,60);
+function fillP(){const p=S.p||{},set=(i,v)=>{const e=$("#"+i);if(e&&v!==undefined&&v!=="")e.value=v};set("cn",p.n);set("ca",p.a);set("cs",p.s);set("ch",p.h);set("cw",p.w||(S.w.length?S.w[S.w.length-1].w:""));set("cv",p.v);set("cg",p.g)}
+const _rn=render;render=function(){_rn();fillP()};
 function water(n){const d=day();d.water=Math.max(0,d.water+n);save();render()}
 function addSteps(){const n=parseInt($("#st").value);if(n>0){day().steps+=n;save()}render()}
 function logW(){const v=parseFloat($("#wt").value);if(!(v>0))return;const k=dk(),e=S.w.find(x=>x.d==k);e?e.w=v:S.w.push({d:k,w:v});save();render()}
@@ -152,7 +159,8 @@ function addFood(n,k){day().meals.push({n,k});save();render()}
 function addCustom(){const n=$("#fn").value.trim(),k=parseInt($("#fk").value);if(n&&k>0)addFood(n,k)}
 function delMeal(i){day().meals.splice(i,1);save();render()}
 function saveGoals(){S.g={cal:+$("#gc").value||2000,water:+$("#gw").value||2000,steps:+$("#gs").value||8000,wt:$("#gt").value};save();note="Goals saved.";render()}
-function calc(){const a=+$("#ca").value,h=+$("#ch").value,w=+$("#cw").value;if(!(a&&h&&w)){$("#cr").textContent="Fill in age, height and weight.";return}
+function saveProfile(q){S.p={n:$("#cn").value.trim(),a:$("#ca").value,s:$("#cs").value,h:$("#ch").value,w:$("#cw").value,v:$("#cv").value,g:$("#cg").value};const w=parseFloat(S.p.w);if(w>0){const k=dk(),e=S.w.find(x=>x.d==k);e?e.w=w:S.w.push({d:k,w})}save();if(!q){note="Profile saved.";render()}}
+function calc(){saveProfile(1);const a=+$("#ca").value,h=+$("#ch").value,w=+$("#cw").value;if(!(a&&h&&w)){$("#cr").textContent="Fill in age, height and weight.";return}
 const bmr=10*w+6.25*h-5*a+($("#cs").value=="m"?5:-161),t=Math.max(1200,Math.round(bmr*$("#cv").value+ +$("#cg").value));S.g.cal=t;save();note="Your estimated daily target is "+t+" kcal. It has been set as your goal.";render()}
 let P=null,tm=null;
 function startW(id){const w=W[id],seq=[];w.ex.forEach((e,i)=>{seq.push({n:e[0],s:e[1]});if(i<w.ex.length-1)seq.push({n:"Rest",s:10})});P={w,seq,i:0,t:seq[0].s,p:false};$("#pl").style.display="flex";clearInterval(tm);tm=setInterval(tick,1000);drawP()}
